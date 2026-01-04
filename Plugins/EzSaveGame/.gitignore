@@ -1,0 +1,44 @@
+﻿# Unreal Engine
+Binaries/
+Intermediate/
+Build/
+DerivedDataCache/
+
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Compiled files
+*.dll
+*.pdb
+*.lib
+*.exp
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Don't ignore essential third-party files
+!Source/ThirdParty/tomlplusplus/toml.hpp
+!Source/ThirdParty/yaml-cpp/LICENSE
+!Source/ThirdParty/yaml-cpp/include/**/*
+!Source/ThirdParty/yaml-cpp/src/**/*.cpp
+!Source/ThirdParty/tinyxml2/LICENSE.txt
+!Source/ThirdParty/tinyxml2/tinyxml2.h
+!Source/ThirdParty/tinyxml2/tinyxml2.cpp
+

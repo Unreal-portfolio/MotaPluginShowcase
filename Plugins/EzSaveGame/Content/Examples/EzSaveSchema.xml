@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+==================================================================
+EzSaveGame - Example Schema Definition (XML Format)
+==================================================================
+This schema defines the structure and validation rules for save data.
+Schemas are automatically generated but can be manually edited.
+Use this to enforce data integrity and support schema versioning.
+==================================================================
+-->
+<Schema>
+  <SchemaVersion>1.0.0</SchemaVersion>
+  
+  <Fields>
+    <!-- Field: PlayerName -->
+    <Field Name="PlayerName" Type="String" IsArray="false" Required="true" DefaultValue="Hero">
+      <Description>The player's character name</Description>
+    </Field>
+    
+    <!-- Field: PlayerLevel -->
+    <Field Name="PlayerLevel" Type="Int" IsArray="false" Required="true" DefaultValue="1" Min="1" Max="100">
+      <Description>The player's current level</Description>
+    </Field>
+    
+    <!-- Field: PlayerHealth -->
+    <Field Name="PlayerHealth" Type="Float" IsArray="false" Required="true" DefaultValue="100.0" Min="0.0" Max="100.0">
+      <Description>The player's current health points</Description>
+    </Field>
+    
+    <!-- Field: PlayerPosition -->
+    <Field Name="PlayerPosition" Type="Vector" IsArray="false" Required="false" DefaultValue="0.0,0.0,0.0">
+      <Description>The player's position in world space (X,Y,Z)</Description>
+    </Field>
+    
+    <!-- Field: PlayerRotation -->
+    <Field Name="PlayerRotation" Type="Rotator" IsArray="false" Required="false" DefaultValue="0.0,0.0,0.0">
+      <Description>The player's rotation (Pitch,Yaw,Roll)</Description>
+    </Field>
+    
+    <!-- Field: HasCompletedTutorial -->
+    <Field Name="HasCompletedTutorial" Type="Bool" IsArray="false" Required="false" DefaultValue="false">
+      <Description>Whether the player has completed the tutorial</Description>
+    </Field>
+    
+    <!-- Field: InventoryItems (Array) -->
+    <Field Name="InventoryItems" Type="String" IsArray="true" Required="false" DefaultValue="" MaxArraySize="50">
+      <DefaultArray>
+        <Item>Sword</Item>
+        <Item>Shield</Item>
+        <Item>Potion</Item>
+      </DefaultArray>
+      <Description>Array of item names in the player's inventory</Description>
+    </Field>
+    
+    <!-- Field: QuestLevels (Array) -->
+    <Field Name="QuestLevels" Type="Int" IsArray="true" Required="false" DefaultValue="">
+      <DefaultArray>
+        <Item>1</Item>
+        <Item>5</Item>
+        <Item>10</Item>
+      </DefaultArray>
+      <Description>Array of completed quest levels</Description>
+    </Field>
+    
+    <!-- Field: SkillMultipliers (Array) -->
+    <Field Name="SkillMultipliers" Type="Float" IsArray="true" Required="false" DefaultValue="">
+      <DefaultArray>
+        <Item>1.0</Item>
+        <Item>1.5</Item>
+        <Item>2.0</Item>
+      </DefaultArray>
+      <Description>Array of skill damage multipliers</Description>
+    </Field>
+  </Fields>
+</Schema>

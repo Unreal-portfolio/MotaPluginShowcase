@@ -1,0 +1,27 @@
+﻿{
+  "_comment": "==================================================================",
+  "_description": "EzSaveGame - Example Save Data Configuration (JSON Format)",
+  "_usage": "This file demonstrates how saved game data appears in JSON format.",
+  "_note": "Use this as a reference when creating your SaveGame classes.",
+  "_comment2": "==================================================================",
+  
+  "PlayerName": "MightyHero",
+  "PlayerLevel": 42,
+  "PlayerHealth": 87.5,
+  "PlayerPosition": "1234.5,5678.9,100.0",
+  "PlayerRotation": "0.0,90.0,0.0",
+  "HasCompletedTutorial": true,
+  
+  "InventoryItems": [
+    "Legendary Sword",
+    "Magic Shield",
+    "Health Potion",
+    "Mana Potion",
+    "Gold Key"
+  ],
+  
+  "QuestLevels": [1, 5, 10, 15, 20, 25],
+  
+  "SkillMultipliers": [1.0, 1.25, 1.5, 2.0, 2.5]
+}
+

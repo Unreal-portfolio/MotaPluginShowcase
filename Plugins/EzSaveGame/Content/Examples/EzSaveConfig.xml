@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+==================================================================
+EzSaveGame - Example Save Data Configuration (XML Format)
+==================================================================
+This file demonstrates how saved game data appears in XML format.
+XML is structured and hierarchical, suitable for complex data.
+Use this as a reference when creating your SaveGame classes.
+==================================================================
+-->
+<Config>
+  <!-- Basic player information -->
+  <Field Name="PlayerName">MightyHero</Field>
+  <Field Name="PlayerLevel">42</Field>
+  <Field Name="PlayerHealth">87.5</Field>
+  <Field Name="HasCompletedTutorial">true</Field>
+  
+  <!-- Unreal Engine types (Vector, Rotator) stored as comma-separated strings -->
+  <Field Name="PlayerPosition">1234.5,5678.9,100.0</Field>
+  <Field Name="PlayerRotation">0.0,90.0,0.0</Field>
+  
+  <!-- Array of strings - Player's inventory items -->
+  <Field Name="InventoryItems">
+    <Array>
+      <Item>Legendary Sword</Item>
+      <Item>Magic Shield</Item>
+      <Item>Health Potion</Item>
+      <Item>Mana Potion</Item>
+      <Item>Gold Key</Item>
+    </Array>
+  </Field>
+  
+  <!-- Array of integers - Quest progress levels -->
+  <Field Name="QuestLevels">
+    <Array>
+      <Item>1</Item>
+      <Item>5</Item>
+      <Item>10</Item>
+      <Item>15</Item>
+      <Item>20</Item>
+      <Item>25</Item>
+    </Array>
+  </Field>
+  
+  <!-- Array of floats - Skill damage multipliers -->
+  <Field Name="SkillMultipliers">
+    <Array>
+      <Item>1.0</Item>
+      <Item>1.25</Item>
+      <Item>1.5</Item>
+      <Item>2.0</Item>
+      <Item>2.5</Item>
+    </Array>
+  </Field>
+</Config>
+

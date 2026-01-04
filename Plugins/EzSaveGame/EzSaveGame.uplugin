@@ -1,0 +1,31 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"EngineVersion": "5.6.0",
+	"FriendlyName": "EzSaveGame",
+	"Description": "Advanced multi-format save system (JSON/TOML/YAML/XML) with slots, schemas and encryption.",
+	"Category": "Utilities",
+	"CreatedBy": "Jose Antonio Mota",
+	"CreatedByURL": "https://www.linkedin.com/in/joseantoniomotalucas/",
+	"DocsURL": "",
+	"FabURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"PlatformAllowList": ["Win64", "Win32"],
+	"Modules": [
+		{
+			"Name": "EzSaveGameRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "EzSaveGameEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}

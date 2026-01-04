@@ -1,0 +1,99 @@
+﻿# ==================================================================
+# EzSaveGame - Example Schema Definition (YAML Format)
+# ==================================================================
+# This schema defines the structure and validation rules for save data.
+# Schemas are automatically generated but can be manually edited.
+# Use this to enforce data integrity and support schema versioning.
+# ==================================================================
+
+SchemaVersion: "1.0.0"
+
+Fields:
+  # Field: PlayerName
+  - Name: PlayerName
+    Type: String
+    IsArray: false
+    Required: true
+    DefaultValue: "Hero"
+    Description: "The player's character name"
+  
+  # Field: PlayerLevel
+  - Name: PlayerLevel
+    Type: Int
+    IsArray: false
+    Required: true
+    DefaultValue: "1"
+    Min: 1
+    Max: 100
+    Description: "The player's current level"
+  
+  # Field: PlayerHealth
+  - Name: PlayerHealth
+    Type: Float
+    IsArray: false
+    Required: true
+    DefaultValue: "100.0"
+    Min: 0.0
+    Max: 100.0
+    Description: "The player's current health points"
+  
+  # Field: PlayerPosition
+  - Name: PlayerPosition
+    Type: Vector
+    IsArray: false
+    Required: false
+    DefaultValue: "0.0,0.0,0.0"
+    Description: "The player's position in world space (X,Y,Z)"
+  
+  # Field: PlayerRotation
+  - Name: PlayerRotation
+    Type: Rotator
+    IsArray: false
+    Required: false
+    DefaultValue: "0.0,0.0,0.0"
+    Description: "The player's rotation (Pitch,Yaw,Roll)"
+  
+  # Field: HasCompletedTutorial
+  - Name: HasCompletedTutorial
+    Type: Bool
+    IsArray: false
+    Required: false
+    DefaultValue: "false"
+    Description: "Whether the player has completed the tutorial"
+  
+  # Field: InventoryItems (Array)
+  - Name: InventoryItems
+    Type: String
+    IsArray: true
+    Required: false
+    DefaultValue: ""
+    DefaultArray:
+      - "Sword"
+      - "Shield"
+      - "Potion"
+    MaxArraySize: 50
+    Description: "Array of item names in the player's inventory"
+  
+  # Field: QuestLevels (Array)
+  - Name: QuestLevels
+    Type: Int
+    IsArray: true
+    Required: false
+    DefaultValue: ""
+    DefaultArray:
+      - 1
+      - 5
+      - 10
+    Description: "Array of completed quest levels"
+  
+  # Field: SkillMultipliers (Array)
+  - Name: SkillMultipliers
+    Type: Float
+    IsArray: true
+    Required: false
+    DefaultValue: ""
+    DefaultArray:
+      - 1.0
+      - 1.5
+      - 2.0
+    Description: "Array of skill damage multipliers"

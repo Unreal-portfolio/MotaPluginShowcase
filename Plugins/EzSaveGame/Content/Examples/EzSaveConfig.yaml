@@ -1,0 +1,43 @@
+﻿# ==================================================================
+# EzSaveGame - Example Save Data Configuration (YAML Format)
+# ==================================================================
+# This file demonstrates how saved game data appears in YAML format.
+# YAML is human-readable with minimal syntax, using indentation.
+# Use this as a reference when creating your SaveGame classes.
+# ==================================================================
+
+# Basic player information
+PlayerName: MightyHero
+PlayerLevel: 42
+PlayerHealth: 87.5
+HasCompletedTutorial: true
+
+# Unreal Engine types (Vector, Rotator) are stored as comma-separated strings
+PlayerPosition: "1234.5,5678.9,100.0"
+PlayerRotation: "0.0,90.0,0.0"
+
+# Array of strings - Player's inventory items
+InventoryItems:
+  - Legendary Sword
+  - Magic Shield
+  - Health Potion
+  - Mana Potion
+  - Gold Key
+
+# Array of integers - Quest progress levels
+QuestLevels:
+  - 1
+  - 5
+  - 10
+  - 15
+  - 20
+  - 25
+
+# Array of floats - Skill damage multipliers
+SkillMultipliers:
+  - 1.0
+  - 1.25
+  - 1.5
+  - 2.0
+  - 2.5
+

@@ -1,0 +1,92 @@
+﻿{
+  "_comment": "==================================================================",
+  "_description": "EzSaveGame - Example Schema Definition (JSON Format)",
+  "_usage": "This schema defines the structure and validation rules for save data.",
+  "_note": "Schemas are automatically generated but can be manually edited.",
+  "_comment2": "==================================================================",
+  
+  "SchemaVersion": "1.0.0",
+  
+  "Fields": [
+    {
+      "Name": "PlayerName",
+      "Type": "String",
+      "IsArray": false,
+      "Required": true,
+      "DefaultValue": "Hero",
+      "Description": "The player's character name"
+    },
+    {
+      "Name": "PlayerLevel",
+      "Type": "Int",
+      "IsArray": false,
+      "Required": true,
+      "DefaultValue": "1",
+      "Min": 1,
+      "Max": 100,
+      "Description": "The player's current level"
+    },
+    {
+      "Name": "PlayerHealth",
+      "Type": "Float",
+      "IsArray": false,
+      "Required": true,
+      "DefaultValue": "100.0",
+      "Min": 0.0,
+      "Max": 100.0,
+      "Description": "The player's current health points"
+    },
+    {
+      "Name": "PlayerPosition",
+      "Type": "Vector",
+      "IsArray": false,
+      "Required": false,
+      "DefaultValue": "0.0,0.0,0.0",
+      "Description": "The player's position in world space (X,Y,Z)"
+    },
+    {
+      "Name": "PlayerRotation",
+      "Type": "Rotator",
+      "IsArray": false,
+      "Required": false,
+      "DefaultValue": "0.0,0.0,0.0",
+      "Description": "The player's rotation (Pitch,Yaw,Roll)"
+    },
+    {
+      "Name": "HasCompletedTutorial",
+      "Type": "Bool",
+      "IsArray": false,
+      "Required": false,
+      "DefaultValue": "false",
+      "Description": "Whether the player has completed the tutorial"
+    },
+    {
+      "Name": "InventoryItems",
+      "Type": "String",
+      "IsArray": true,
+      "Required": false,
+      "DefaultValue": "",
+      "DefaultArray": ["Sword", "Shield", "Potion"],
+      "MaxArraySize": 50,
+      "Description": "Array of item names in the player's inventory"
+    },
+    {
+      "Name": "QuestLevels",
+      "Type": "Int",
+      "IsArray": true,
+      "Required": false,
+      "DefaultValue": "",
+      "DefaultArray": [1, 5, 10],
+      "Description": "Array of completed quest levels"
+    },
+    {
+      "Name": "SkillMultipliers",
+      "Type": "Float",
+      "IsArray": true,
+      "Required": false,
+      "DefaultValue": "",
+      "DefaultArray": [1.0, 1.5, 2.0],
+      "Description": "Array of skill damage multipliers"
+    }
+  ]
+}
